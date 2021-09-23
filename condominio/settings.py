@@ -153,12 +153,14 @@ if AWS_ACCESS_KEY_ID:
     AWS_AUTO_CREATE_BUCKET = False
     AWS_QUERYSTRING_AUTH = True #
     AWS_S3_CUSTOM_DOMAIN = None #
-    AWS_DEFAULT_ACL = 'private'
     COLLECTFAST_ENABLED = True
+    AWS_DEFAULT_ACL = 'private'
+    
 
     # Static Assets
     # -------------
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
+    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy" #
     STATIC_S3_PATH = 'static'
     STATIC_ROOT = f'/{STATIC_S3_PATH}/'
     STATIC_URL = f'//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{STATIC_S3_PATH}/'
