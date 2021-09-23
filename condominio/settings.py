@@ -60,7 +60,7 @@ ROOT_URLCONF = 'condominio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'apartamentos/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,8 +127,12 @@ USE_TZ = True
 
 # Configuração de ambiente de desenvolvimento
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'staticfiles/admin') 
+
+]
 
 # Arquivos de media - upload
 MEDIA_URL = '/media/'
