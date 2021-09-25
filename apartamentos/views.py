@@ -6,7 +6,16 @@ def index(request):
 
 
 def apartamentos_disponiveis(request):
-    return render(request, 'apartamentos_disponiveis.html')
+    apartamentos = {
+        1: '100',
+        2: '200',
+        3: "878",
+    }
+
+    dados = {
+        'dados_apartamentos': apartamentos
+    }
+    return render(request, 'apartamentos_disponiveis.html', dados )
 
 
 def visualizacao_apartamento(request):
