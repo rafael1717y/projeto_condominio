@@ -39,6 +39,7 @@
                 "sha256:9d5b70be2f417d0aa30788049fd20473ad27218eccd05e71f545b4b4e09c79a0"
             ],
             "markers": "python_version >= '3.6'",
+
             "version": "==1.21.48"
         },
         "collectfast": {
