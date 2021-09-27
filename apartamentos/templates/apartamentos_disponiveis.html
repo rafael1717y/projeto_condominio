@@ -50,19 +50,22 @@
     <section class="best-receipe-area">
         <div class="container">
             <div class="row">
-                {% for chave, nr_do_apartamento in dados_apartamentos.items %}
-                <!-- Single Best Receipe Area -->
+                {% if apartamentos %}
+                {% for apartamento in apartamentos %}
+                <!-- Single Best Receipe Area 1:00-->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
                         <img src="{% static 'img/bg-img/foto_apartamento.png' %}" alt="" img width="100%">
                         <div class="receipe-content">
-                            <a href="{% url 'visualizacao_apartamento' %}">
-                                <h5>{{ nr_do_apartamento }}</h5>
+                            <a href="{% url 'visualizacao_apartamento' apartamento.id %}">
+                                <h5>{{ apartamento.nr_apartamento}}</h5>
                             </a>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
+                {% else %}
+                {% endif %}
 
     </section>
 

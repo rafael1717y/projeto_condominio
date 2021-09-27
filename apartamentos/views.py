@@ -1,22 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
+from .models import Apartamento
+
 
 def index(request):
     return render(request, 'index.html')
 
 
 def apartamentos_disponiveis(request):
-    apartamentos = {
-        1: '100',
-        2: '200',
-        3: "878",
-    }
+    apartamentos = Apartamento.objects.all()
 
     dados = {
-        'dados_apartamentos': apartamentos
+        'apartamentos': apartamentos
     }
-    return render(request, 'apartamentos_disponiveis.html', dados )
+    return render(request, 'apartamentos_disponiveis.html', dados )  # apartamentos_disponveis === index
 
 
-def visualizacao_apartamento(request):
-    return render(request, 'visualizacao_apartamento.html')
+def visualizacao_apartamento(request, apartamento_id):
+    apartamento = get_object_or_404(Apartamento, pk=apartamento_id)
+
+    apartamento_a_exibir = {
+        'apartamento' : apartamento
+    }
+
+    return render(request, 'visualizacao_apartamento.html', apartamento_a_exibir)

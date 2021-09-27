@@ -110,13 +110,14 @@
                 <div class="row">
                     <div class="col-12 col-md-8">
                         <div class="receipe-headline my-5">
-                            <span>30 de Fevereiro, 2000</span>
-                            <h2>{{ nr_do_apartamento}}</h2>
+                            <span>Postado em: {{ apartamento.data_criacao}}</span>
+                            <h2> Apartamento: {{ apartamento.nr_apartamento}}</h2>
                             <div class="receipe-duration">
-                                <h6>Característica 1: 15 minutos</h6>
-                                <h6>Característica 2: 2 porçoes</h6>
-                                <h6>Característica 3: categoria</h6>
-                                <h6>Característica 4: Pessoa</h6>
+                                <h6>Bloco: {{ apartamento.bloco    }}</h6>
+                                <h6>Categoria: {{ apartamento.categoria}}</h6>
+                                <h6>Proprietário: {{ apartamento.nome_proprietario }}</h6>
+                                <h6>Email: {{ apartamento.email_proprietario }}</h6>
+                                <h6>Fone: {{ apartamento.fone_proprietario }}</h6>                                
                             </div>
                         </div>
                     </div>
@@ -125,7 +126,7 @@
                     <div class="col-12 col-lg-8">
                         <!-- Single Preparation Step -->
                         <div class="single-preparation-step d-flex">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                            <p>Descrição: {{ apartamento.descricao_apartamento}} </p>
                         </div>
                     </div>
 
