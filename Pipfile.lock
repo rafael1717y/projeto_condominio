@@ -26,7 +26,6 @@
         },
         "boto3": {
             "hashes": [
-
                 "sha256:7b45b224442c479de4bc6e6e9cb0557b642fc7a77edc8702e393ccaa2e0aa128",
                 "sha256:c388da7dc1a596755f39de990a72e05cee558d098e81de63de55bd9598cc5134"
             ],
@@ -35,12 +34,10 @@
         },
         "botocore": {
             "hashes": [
-                "sha256:2c25a76f09223b2f00ad578df34492b7b84cd4828fc90c08ccbdd1d70abbd7eb",
-                "sha256:9d5b70be2f417d0aa30788049fd20473ad27218eccd05e71f545b4b4e09c79a0"
+                "sha256:5fa5de2deef817d0ef52b97dec2bc6e4489a3145afa3f5f4ec0ad6a3b213a019",
+                "sha256:9210881ee5eef6fff30a2e1acfe9dea068a0885a13731ab2034e35775379637f"
             ],
-            "markers": "python_version >= '3.6'",
-
-            "version": "==1.21.48"
+            "version": "==1.22.6"
         },
         "collectfast": {
             "hashes": [
