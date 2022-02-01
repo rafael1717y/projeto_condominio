@@ -56,10 +56,10 @@
         },
         "django": {
             "hashes": [
-                "sha256:59304646ebc6a77b9b6a59adc67d51ecb03c5e3d63ed1f14c909cdfda84e8010",
-                "sha256:d5a8a14da819a8b9237ee4d8c78dfe056ff6e8a7511987be627192225113ee75"
+                "sha256:110fb58fb12eca59e072ad59fc42d771cd642dd7a2f2416582aa9da7a8ef954a",
+                "sha256:996495c58bff749232426c88726d8cd38d24c94d7c1d80835aafffa9bc52985a"
             ],
-            "version": "==4.0"
+            "version": "==4.0.2"
         },
         "django-s3-folder-storage": {
             "hashes": [
