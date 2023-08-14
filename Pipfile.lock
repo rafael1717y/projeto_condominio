@@ -30,7 +30,7 @@
         },
         "botocore": {
             "hashes": [],
-            "version": "==1.27.65"
+            "version": "==1.31.26"
         },
         "collectfast": {
             "hashes": [
